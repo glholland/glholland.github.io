@@ -39,7 +39,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo src --minify
+        run: hugo build src --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
