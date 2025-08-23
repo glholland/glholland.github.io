@@ -1,0 +1,55 @@
+{{ define "main" }}
+  <article class="prose dark:prose-invert max-w-none">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="mb-8">{{ . }}</div>{{ end }}
+
+    {{/* Collect pages and group by company param in front matter */}}
+    {{ $pages := where .Pages "Kind" "page" }}
+    {{ $groups := dict }}
+    {{ range $p := $pages }}
+      {{ $company := $p.Params.company | default "Other" }}
+      {{ $existing := index $groups $company }}
+      {{ if $existing }}
+        {{ $groups = merge $groups (dict $company ( $existing | append $p )) }}
+      {{ else }}
+        {{ $groups = merge $groups (dict $company ( slice $p )) }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Sort company names alphabetically (Ford first manually) */}}
+    {{ $companyNames := slice }}
+    {{ range $k, $v := $groups }}
+      {{ $companyNames = $companyNames | append $k }}
+    {{ end }}
+    {{ $companyNames = sort $companyNames }}
+    {{/* If Ford Motor Company present, move to front */}}
+    {{ if in $companyNames "Ford Motor Company" }}
+      {{ $reordered := slice "Ford Motor Company" }}
+      {{ range $n := $companyNames }}
+        {{ if ne $n "Ford Motor Company" }}
+          {{ $reordered = $reordered | append $n }}
+        {{ end }}
+      {{ end }}
+      {{ $companyNames = $reordered }}
+    {{ end }}
+
+    {{ range $c := $companyNames }}
+      <section class="mb-12">
+        <h2 class="mt-0">{{ $c }}</h2>
+        {{ $entries := index $groups $c }}
+        {{/* Sort entries by a derived date from Dates line if possible (we lack front matter dates now) */}}
+        {{ range $e := $entries }}
+          <div class="mb-6">
+            <h3 class="mb-1 text-lg font-semibold">{{ $e.Title }}</h3>
+            {{ with $e.Content }}
+              {{/* Extract first paragraph until Highlights heading */}}
+              {{ $split := split . "### Highlights" }}
+              <div class="text-sm leading-relaxed">{{ index $split 0 | safeHTML }}</div>
+            {{ end }}
+            <a class="text-primary-600 dark:text-primary-400 text-sm" href="{{ $e.RelPermalink }}">Full details →</a>
+          </div>
+        {{ end }}
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

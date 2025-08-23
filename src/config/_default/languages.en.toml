@@ -1,0 +1,22 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "`garrettholland.com`"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Personal site of Garrett Holland"
+
+[params.author]
+  name = "Garrett Holland"
+  headline = "Software Engineer"
+  bio = "Building reliable systems & teams."
+  links = [
+    { twitter = "https://twitter.com/skaterdurf" },
+    { github = "https://github.com/glholland" },
+    { linkedin = "https://linkedin.com/in/garrettholland" }
+  ]
