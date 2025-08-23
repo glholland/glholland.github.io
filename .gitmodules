@@ -1,3 +1,3 @@
 [submodule "libfoo"]
-	path = src/themes/blowfish
+	path = themes/blowfish
 	url = https://github.com/nunocoracao/blowfish.git
