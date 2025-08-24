@@ -1,14 +1,15 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Hugo Deploy (GitHub Pages)
+name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  pull_request:
+    branches: ["main"]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -23,48 +24,40 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build site
+  deploy:
     runs-on: ubuntu-22.04
+    # Attach to GitHub Environment for protection rules & history
+    environment:
+      name: github-pages
+      url: https://garrettholland.com
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.148.2'
-          extended: true
+          # extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo build --minify
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload build (PR preview artifact)
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
         with:
-          path: ./public
+          name: hugo-preview
+          path: public
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-22.04
-    if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  preview:
-    name: Preview (PR / non-main)
-    needs: build
-    if: github.ref != 'refs/heads/main'
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Indicate preview artifact location
-        run: echo "Download the 'github-pages' artifact from this workflow run for preview."
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          cname: garrettholland.com
