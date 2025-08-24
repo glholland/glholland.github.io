@@ -1,12 +1,13 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Hugo Deploy (GitHub Pages)
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -22,29 +23,48 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
+    name: Build site
     runs-on: ubuntu-22.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.148.2'
-          # extended: true
+          extended: true
 
       - name: Build
-        run: hugo build --minify
+        run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: garrettholland.com
+          path: ./public
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  preview:
+    name: Preview (PR / non-main)
+    needs: build
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Indicate preview artifact location
+        run: echo "Download the 'github-pages' artifact from this workflow run for preview."
