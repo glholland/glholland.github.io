@@ -4,7 +4,7 @@ title: "Resume"
 
 ## Objective
 
-I seek a role where I can apply my technical skills to contribute to an organization while expanding my expertise and facing diverse challenges to grow professionally. I also aim to further cultivate servant leadership principles through practical experience.
+I'm always looking to apply my technical skills to solve an organization's problems while expanding my technical expertise and facing diverse challenges to grow professionally. I seek to further cultivate servant leadership principles through practical experience.
 
 ## Skills
 
