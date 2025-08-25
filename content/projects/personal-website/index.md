@@ -4,7 +4,7 @@ title: "Personal Site"
 
 ## `garrettholland.com`
 
-A personal domain turned long‑running experimentation ground.
+A personal domain turned long-running experimentation ground.
 
 ### Genesis
 
