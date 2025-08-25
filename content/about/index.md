@@ -17,7 +17,7 @@ Apply and grow my technical depth while taking on broader platform and security 
 
 ### Communication and Enablement
 
-I co-facilitate the Ford Kubernetes User Group (bi‑quarterly), publish upgrade and incident advisories, coordinate vendor workshops, and translate platform constraints into actionable guidance for application teams.
+I co-facilitate the Ford Kubernetes User Group (bi-quarterly), publish upgrade and incident advisories, coordinate vendor workshops, and translate platform constraints into actionable guidance for application teams.
 
 The goal is to shorten the path from idea to production while maintaining security posture.
 
