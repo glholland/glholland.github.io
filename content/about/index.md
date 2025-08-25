@@ -9,7 +9,11 @@ showLikes: false
 showViews: false
 ---
 
-I'm a Kubernetes Platform Engineer focused on enabling teams to deliver secure, reliable software on modern container platforms. I enjoy balancing platform reliability work (upgrades, automation, guardrails) with direct developer enablement—documentation, walkthroughs, and user group sessions.
+I'm a Cyber Security engineer focused on enabling teams to deliver secure, reliable software on modern container platforms. I enjoy balancing platform reliability work (upgrades, automation, guardrails) with direct developer enablement—documentation, walkthroughs, and user group sessions.
+
+I like the term Container Security Engineer because I feel it better encapsulates my focus on securing containerized applications and providing security through transparency with various Open Source tools and practices.
+
+If you can't read the code it's a black box and I don't like!
 
 ### Objective
 
