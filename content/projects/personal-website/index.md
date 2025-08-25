@@ -12,7 +12,7 @@ This site showcases projects and professional experience. I also post occasional
 
 The domain originally supported internal networking projects. Typing `garrettholland.com` is more memorable than an internal IP address. Since then, I have hosted several iterations here.
 
-I previously deployed fully hand‑coded sites (Bootstrap plus light JavaScript) in Azure, Google Cloud Platform, and Amazon Web Services. That exploration predated consistent use of `git`, so no history remains. I also experimented with static site generators (Jekyll and Hugo) across those clouds.
+I previously deployed fully hand-coded sites (Bootstrap plus light JavaScript) in Azure, Google Cloud Platform, and Amazon Web Services. That exploration predated consistent use of `git`, so no history remains. I also experimented with static site generators (Jekyll and Hugo) across those clouds.
 
 ### Current Iteration (Summer 2025)
 
