@@ -1,5 +1,7 @@
 ---
 title: "Personal Site"
+showViews: true
+date: 2025-02-14T15:23:00-05:00
 ---
 
 ## `garrettholland.com`
