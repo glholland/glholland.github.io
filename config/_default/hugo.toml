@@ -6,6 +6,7 @@ baseURL = "https://garrettholland.com/"
 defaultContentLanguage = "en"
 theme = "blowfish"
 colorScheme = "terminal"
+googleAnalytics = "G-NM49DVFFYW"
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
@@ -33,7 +34,6 @@ links = [
   appId = "$FB_APP_ID"
   measurementId = "$FB_MEASUREMENT_ID"
 
-# googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
   pagerSize = 100
