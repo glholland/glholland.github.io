@@ -46,6 +46,14 @@ jobs:
 
       - name: Build
         run: hugo build --minify
+        env:
+          FB_API_KEY: ${{ secrets.FB_API_KEY }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_AUTH_DOMAIN: ${{ secrets.FB_AUTH_DOMAIN }}
+          FB_MEASUREMENT_ID: ${{ secrets.FB_MEASUREMENT_ID }}
+          FB_MSG_SENDER_ID: ${{ secrets.FB_MSG_SENDER_ID }}
+          FB_PROJECT_ID: ${{ secrets.FB_PROJECT_ID }}
+          FB_STORAGE_BUCKET: ${{ secrets.FB_STORAGE_BUCKET }}
 
       - name: Upload build (PR preview artifact)
         if: github.event_name == 'pull_request'
