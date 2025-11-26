@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+description: "Contact Garrett Holland via Email, LinkedIn, GitHub, or Twitter."
 ---
 
 Feel free to reach out through any of the channels below:

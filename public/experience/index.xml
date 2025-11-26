@@ -10,16 +10,6 @@
     <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/experience/sample-company/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/experience/sample-company/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Cloud Security Engineer</title>
       <link>http://localhost:1313/experience/ford-cloud-security-engineer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
