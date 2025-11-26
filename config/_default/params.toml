@@ -23,9 +23,9 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images 
-# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
-# defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
+# defaultBackgroundImage = "images/whowrotethis.jpg" # used as default for background images 
+# defaultFeaturedImage = "images/whowrotethis.jpg" # used as default for featured images in all articles
+defaultSocialImage = "images/whowrotethis.jpg" # used as default for social media sharing (Open Graph and Twitter)
 
 # highlightCurrentMenuArea = true
 # smartTOC = true
@@ -163,10 +163,10 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # globalWidgetPosition = "Right"
 
 [verification]
-  # google = ""
-  # bing = ""
-  # pinterest = ""
-  # yandex = ""
+  # google = "GOOGLE_VERIFICATION_TOKEN"
+  bing = "1E0238CE9B5C91874F2073C95C79A004"
+  # pinterest = "PINTEREST_VERIFICATION_TOKEN"
+  # yandex = "YANDEX_VERIFICATION_TOKEN"
   # fediverse = ""
 
 [rssnext]

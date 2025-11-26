@@ -1,5 +1,6 @@
 ---
 title: "Garrett Holland"
+description: "Garrett Holland - Full Stack Developer, Kubernetes Platform Engineer, and Cloud Security Engineer."
 ---
 
 Full Stack Developer, Kubernetes Platform Engineer, and Cloud Security Engineer focusing on Container Security.
