@@ -9,15 +9,14 @@ title = "Garrett Holland"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Personal site of Garrett Holland - Software Engineer building reliable systems and teams."
+  description = "Garrett Holland - Kubernetes Platform Engineer building reliable systems and teams."
 
 [params.author]
   name = "Garrett Holland"
   image = "images/headshot.jpg"
-  headline = "Software Engineer"
+  headline = "Kubernetes Platform Engineer"
   bio = "Building reliable systems & teams."
   links = [
-    { twitter = "https://twitter.com/skaterdurf" },
     { github = "https://github.com/glholland" },
     { linkedin = "https://linkedin.com/in/garrettholland" }
   ]
