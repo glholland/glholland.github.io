@@ -7,7 +7,7 @@ showDate: false
 showAuthor: false
 ---
 
-**Dates:** Dec 2022 – Mar 2025
+**Dates:** Jan 2022 – Jun 2025
 
 Platform engineering & enablement for Ford's Kubernetes / OpenShift environments; balancing reliability (upgrades, SLOs) with developer productivity.
 

@@ -25,7 +25,7 @@ disableTextInHeader = false
 
 # defaultBackgroundImage = "images/whowrotethis.jpg" # used as default for background images 
 # defaultFeaturedImage = "images/whowrotethis.jpg" # used as default for featured images in all articles
-defaultSocialImage = "images/whowrotethis.jpg" # used as default for social media sharing (Open Graph and Twitter)
+defaultSocialImage = "images/headshot.jpg" # used as default for social media sharing (Open Graph and Twitter)
 
 # highlightCurrentMenuArea = true
 # smartTOC = true
@@ -153,7 +153,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [selineAnalytics]
   # token = "XXXXXX"
-  # enableTrackEvent = true
+  # enableTrackEvent = false
 
 [buymeacoffee]
   # identifier = ""
@@ -164,7 +164,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [verification]
   # google = "GOOGLE_VERIFICATION_TOKEN"
-  bing = "1E0238CE9B5C91874F2073C95C79A004"
+  # bing = "1E0238CE9B5C91874F2073C95C79A004"
   # pinterest = "PINTEREST_VERIFICATION_TOKEN"
   # yandex = "YANDEX_VERIFICATION_TOKEN"
   # fediverse = ""

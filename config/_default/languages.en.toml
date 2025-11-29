@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "`garrettholland.com`"
+title = "Garrett Holland"
 
 [params]
   displayName = "EN"
@@ -13,6 +13,7 @@ title = "`garrettholland.com`"
 
 [params.author]
   name = "Garrett Holland"
+  image = "images/headshot.jpg"
   headline = "Software Engineer"
   bio = "Building reliable systems & teams."
   links = [
