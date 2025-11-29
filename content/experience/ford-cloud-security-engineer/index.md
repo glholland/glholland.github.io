@@ -7,7 +7,7 @@ showDate: false
 showAuthor: false
 ---
 
-**Dates:** Mar 2025 – Present
+**Dates:** May 2025 – Nov 2025
 
 Aligning platform and application teams with container security & Kubernetes best practices at scale.
 

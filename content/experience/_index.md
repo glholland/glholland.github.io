@@ -20,7 +20,15 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
 <br>
 
 {{< timeline >}}
-    {{< timelineItem icon="shield" header="Cloud Security Engineer" badge="Mar 2025 – Present" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Nov 2025 – Present" subheader="Ford Motor Company" >}}
+    <ul>
+        <li>Designing and provisioning multi-cloud infrastructure (GCP, Azure, On-prem) for global scale</li>
+        <li>Developing automation and operators to reduce toil and improve developer experience</li>
+    </ul>
+    <br><a href="/experience/ford-kubernetes-platform-engineer-lead/">Full details →</a>
+    {{< /timelineItem >}}
+
+    {{< timelineItem icon="shield" header="Cloud Security Engineer" badge="May 2025 – Nov 2025" subheader="Ford Motor Company" >}}
     <ul>
         <li>Implemented secure-by-default guardrails including image provenance verification and RBAC tightening</li>
         <li>Integrated vulnerability scanning and policy enforcement into CI/CD workflows</li>
@@ -37,7 +45,7 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
     </ul>
     {{< /timelineItem >}}
 
-    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Dec 2022 – Mar 2025" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Jan 2022 – Jun 2025" subheader="Ford Motor Company" >}}
     <ul>
         <li>Coordinated core upgrades across multi-cluster OpenShift and Kubernetes environments maintaining N-1 compliance</li>
         <li>Co-facilitated the Kubernetes User Group and co-maintained internal documentation hub</li>
@@ -81,6 +89,20 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
     </ul>
     <br><a href="/experience/kostal-sap-intern/">Full details →</a>
     {{< /timelineItem >}}
+
+    {{< timelineItem icon="server" header="Jr. System Administrator" badge="May 2018 – Oct 2018" subheader="Oakland University" >}}
+    <ul>
+        <li>Assisted in managing Linux and Windows server environments</li>
+        <li>Provided technical support and troubleshooting for university systems</li>
+    </ul>
+    {{< /timelineItem >}}
+
+    {{< timelineItem icon="desktop" header="Client Service Technician" badge="Sep 2017 – May 2018" subheader="Oakland University" >}}
+    <ul>
+        <li>Provided helpdesk support for students and faculty</li>
+        <li>Maintained computer lab hardware and software</li>
+    </ul>
+    {{< /timelineItem >}}
 {{< /timeline >}}
 
 ### Skills
@@ -121,11 +143,14 @@ spec:
         - JavaScript
     experience:
         - company: Ford Motor Company
+            position: Kubernetes Platform Engineer
+            period: Nov 2025 - Present
+        - company: Ford Motor Company
             position: Cloud Security Engineer
-            period: Mar 2025 - Present
+            period: May 2025 - Nov 2025
         - company: Ford Motor Company
             position: Kubernetes Platform Engineer
-            period: Dec 2022 - Mar 2025
+            period: Jan 2022 - Jun 2025
         - company: Ford Motor Company
             position: DevOps Engineer
             period: Sep 2020 - Dec 2022
@@ -146,6 +171,6 @@ spec:
             year: 2020
 status:
     available: true
-    currentRole: Cloud Security Engineer
-    lastUpdated: "2025-03-15T00:00:00Z"
+    currentRole: Kubernetes Platform Engineer
+    lastUpdated: "2025-11-29T00:00:00Z"
 ```
