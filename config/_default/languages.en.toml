@@ -13,6 +13,7 @@ title = "Garrett Holland"
 
 [params.author]
   name = "Garrett Holland"
+  image = "images/headshot.jpg"
   headline = "Software Engineer"
   bio = "Building reliable systems & teams."
   links = [
