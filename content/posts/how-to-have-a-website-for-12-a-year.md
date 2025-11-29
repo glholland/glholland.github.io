@@ -29,7 +29,7 @@ Before we get into the "how," let's talk about the "why."
 ## The Setup
 
 ### 1. Buy Your Domain
-I recommend **Cloudflare Registrar** for this. They charge wholesale prices (no markup), so a `.com` domain is usually around $9-10/year. Google Domains is another solid option, typically around $12/year.
+I recommend **Cloudflare Registrar** for this. They charge wholesale prices (no markup), so a `.com` domain is usually around $9-10/year and you'll use the same portal for DNS changes. Google Domains is another solid option, typically around $12/year.
 
 ### 2. Set Up GitHub Pages
 GitHub Pages is a free hosting service that serves static files directly from a GitHub repository. It's fast, reliable, and integrates perfectly with your development workflow.
@@ -72,26 +72,45 @@ Since we mentioned Hugo, here is a quick crash course on how to get started:
     ```
     Navigate to `http://localhost:1313` to see your site!
 
-### 4. Connect Cloudflare DNS
+### 4. Deployment Strategy: Branch vs. Actions
+When hosting on GitHub Pages, there are two main ways to publish your site. It's helpful to understand the difference so you know what's happening behind the scenes.
+
+#### Method 1: Deploy from a Branch (Classic)
+This is the traditional method. You tell GitHub, "Serve whatever files are in this specific branch."
+*   **Source Code**: Lives in your `main` branch.
+*   **Built Site**: Lives in a separate branch (often called `gh-pages`).
+*   **The Workflow**: You use a tool (like a GitHub Action) to build your site and *push* the resulting HTML files to the `gh-pages` branch. GitHub then serves that branch.
+
+**This is the method used in this tutorial.** We use a GitHub Action to build our Hugo site and push it to a `gh-pages` branch, keeping our source code clean and separate from the generated output.
+
+#### Method 2: GitHub Actions (Modern)
+GitHub now supports a "pure" Actions workflow where you don't need a separate `gh-pages` branch at all.
+*   **The Workflow**: Your GitHub Action builds the site, uploads the `public` folder as an "artifact", and then tells GitHub Pages to deploy that artifact directly.
+*   **Pros**: Cleaner repository (no extra branch).
+*   **Cons**: Slightly different configuration in the `hugo-build.yml` file.
+
+Both methods work perfectly. We stick with **Method 1** in this guide because it's robust, easy to debug (you can just look at the `gh-pages` branch to see exactly what is being served), and widely supported by community themes and actions.
+
+### 5. Connect Cloudflare DNS
 This is where the magic happens. Cloudflare provides enterprise-grade DNS and security for free.
 1.  Sign up for a free Cloudflare account.
 2.  Add your site (enter your new domain name).
 3.  Cloudflare will give you two nameservers (e.g., `bob.ns.cloudflare.com`). Go to your domain registrar (where you bought the domain) and update the nameservers to point to these.
 4.  In Cloudflare DNS settings, add `CNAME` records to point to your GitHub Pages URL (`username.github.io`).
 
-### 5. Configure GitHub
+### 6. Configure GitHub
 Back in your GitHub repository **Settings > Pages**:
 1.  Enter your custom domain (e.g., `yourname.com`) in the "Custom domain" field.
 2.  Save. GitHub will automatically create a `CNAME` file in your repository.
 3.  Check "Enforce HTTPS".
 
-### 6. Bonus: Free SSL with Let's Encrypt
+### 7. Bonus: Free SSL with Let's Encrypt
 Security is non-negotiable today. In the past, SSL certificates cost hundreds of dollars. Now, thanks to **Let's Encrypt**, they are free.
 
 *   **On GitHub Pages**: When you check "Enforce HTTPS" in your settings, GitHub automatically requests and manages a Let's Encrypt certificate for your custom domain. It handles the renewals for you, so you never have to worry about your site showing a "Not Secure" warning.
 *   **Self-Hosted**: If you decide to host a server yourself (e.g., on a DigitalOcean droplet or a Raspberry Pi), you can use a tool called `certbot` to automatically fetch and install Let's Encrypt certificates for Nginx or Apache.
 
-### 7. Advanced: Using Your Domain for Home Services
+### 8. Advanced: Using Your Domain for Home Services
 One of the coolest perks of owning a domain and using Cloudflare is the ability to route subdomains to internal IP addresses on your home network.
 
 For example, if you have a media server or a dashboard running on your home network at `192.168.1.50`, you can create a DNS record for it:
@@ -109,6 +128,7 @@ For the price of one fancy lunch a year, you get a professional, secure, and fas
 ## References & Documentation
 *   **Cloudflare Registrar**: [Official Docs](https://developers.cloudflare.com/registrar/)
 *   **GitHub Pages**: [Documentation](https://docs.github.com/en/pages)
+*   **GitHub Pages Deployment**: [Documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 *   **Hugo**: [Official Documentation](https://gohugo.io/documentation/)
 *   **Cloudflare DNS**: [DNS Docs](https://developers.cloudflare.com/dns/)
 *   **Let's Encrypt**: [Getting Started](https://letsencrypt.org/docs/)
