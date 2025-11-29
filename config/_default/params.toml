@@ -164,7 +164,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [verification]
   # google = "GOOGLE_VERIFICATION_TOKEN"
-  bing = "1E0238CE9B5C91874F2073C95C79A004"
+  # bing = "1E0238CE9B5C91874F2073C95C79A004"
   # pinterest = "PINTEREST_VERIFICATION_TOKEN"
   # yandex = "YANDEX_VERIFICATION_TOKEN"
   # fediverse = ""
