@@ -3,6 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 baseURL = "https://garrettholland.com/"
+title = "Garrett Holland - Kubernetes Platform Engineer"
 defaultContentLanguage = "en"
 theme = "blowfish"
 colorScheme = "terminal"
@@ -20,13 +21,15 @@ enableEmoji = true
 [article]
   showViews = true
 
-#[params.author]
-#name = "Garrett Holland"
-## image = "img/author.jpg"
-#headline = "Turning coffee into commits..."
-#links = [
-#  { twitter = "https://twitter.com/skaterdurf" }
-#]
+[params.author]
+  name = "Garrett Holland"
+  image = "images/headshot.jpg"
+  headline = "Kubernetes Platform Engineer"
+  links = [
+    { linkedin = "https://linkedin.com/in/garrettholland" },
+    { github = "https://github.com/glholland" },
+    { email = "mailto:garrett.lee.holland@gmail.com" }
+  ]
 
 #[firebase]
 #  apiKey = "$FB_API_KEY"

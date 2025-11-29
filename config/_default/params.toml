@@ -6,6 +6,7 @@
 # https://blowfish.page/docs/configuration/#theme-parameters
 
 colorScheme = "blowfish"
+description = "Garrett Holland is a Kubernetes Platform Engineer based in the Detroit, MI area, specializing in container security, Linux administration, and cloud infrastructure."
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
@@ -48,7 +49,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [homepage]
   layout = "profile" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
+  homepageImage = "images/headshot.jpg" # used in: profile
   showRecent = false
   showRecentItems = 5
   showMoreLink = false
