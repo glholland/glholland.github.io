@@ -1,0 +1,32 @@
+{{ $image := resources.Get "images/headshot.jpg" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Garrett Holland",
+  "url": "{{ .BaseURL }}",
+  "image": "{{ with $image }}{{ .Permalink }}{{ else }}https://garrettholland.com/images/headshot.jpg{{ end }}",
+  "jobTitle": "Kubernetes Platform Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Ford Motor Company"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Oakland University"
+  },
+  "homeLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Detroit",
+      "addressRegion": "MI",
+      "addressCountry": "US"
+    }
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/garrettholland",
+    "https://github.com/glholland"
+  ]
+}
+</script>
