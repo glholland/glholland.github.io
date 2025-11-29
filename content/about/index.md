@@ -1,6 +1,6 @@
 ---
 title: "About"
-description: "About Garrett Holland"
+description: "About Garrett Holland - Kubernetes Platform Engineer & Cloud Security Specialist"
 showDate: false
 showAuthor: false
 showReadingTime: false
