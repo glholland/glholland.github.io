@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "`garrettholland.com`"
+title = "Garrett Holland"
 
 [params]
   displayName = "EN"
