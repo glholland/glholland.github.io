@@ -1,2 +1,20 @@
-#ignore build artifacts
+# Hugo
 public/
+resources/
+.hugo_build.lock
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
