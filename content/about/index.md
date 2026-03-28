@@ -9,22 +9,20 @@ showLikes: false
 showViews: false
 ---
 
-I am a Kubernetes Platform and Cloud Security Engineer focused on enabling teams to deliver secure, reliable software on modern container platforms. I balance platform reliability work (upgrades, automation, guardrails) with direct developer enablement: documentation, walkthroughs, and user group sessions.
+I am a Senior Kubernetes Platform Engineer specializing in enterprise-scale infrastructure automation, secure platform architecture, and developer enablement. I lead a platform engineering team managing OpenShift environments, balancing platform reliability with direct developer enablement through documentation, tooling, and user group sessions.
 
-### Objective
+### What I Do
 
-Apply and grow my technical depth while taking on broader platform and security challenges. Continue developing servant leadership: lifting others through automation, clarity, and collaborative incident response.
+I lead through a combination of hands-on technical work and collaborative team leadership. Day-to-day, I architect CLI tooling in Go, orchestrate multi-team incident response, and mentor engineers on Kubernetes architecture and automation best practices. I leverage GitHub Copilot daily with custom agents to accelerate development and prototyping.
 
 ### Communication and Enablement
 
-I co-facilitate the Ford Kubernetes User Group (bi-quarterly), publish upgrade and incident advisories, coordinate vendor workshops, and translate platform constraints into actionable guidance for application teams.
-
-The goal is to shorten the path from idea to production while maintaining security posture.
+I lead the Ford Kubernetes User Group bi-quarterly (100+ engineers), delivering platform updates, demonstrating best practices, and facilitating vendor workshops. I translate platform constraints into actionable guidance for application teams, shortening the path from idea to production while maintaining security posture.
 
 ### Interests (Outside Work)
 
-In my free time, I enjoy working on my 2006 Nissan 350Z, experimenting with open source projects, building out my home lab networking, participating in endurance sports, and exploring music.
+In my free time, I enjoy working on my 2006 Nissan 350Z, experimenting with open source projects, operating my homelab (K3s, OKD, Proxmox, TrueNAS), participating in endurance sports, and exploring music.
 
 ### Current Focus
 
-Architecting scalable security frameworks that enable enterprise-wide implementation of consistent controls across diverse container deployment solutions. My focus is on creating adaptable patterns that balance robust security posture with operational flexibility, accommodating various teams' maturity levels and compliance requirements.
+Leading platform engineering for enterprise OpenShift environments with a focus on infrastructure automation, lifecycle management, and team development. Building reliable, automated systems through Infrastructure as Code, CI/CD pipeline engineering, and policy-driven platform management.

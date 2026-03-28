@@ -8,10 +8,9 @@ showReadingTime: false
 hideChildren: true
 ---
 
-## Objective
+## Summary
 
-I seek a role where I can apply my technical skills to contribute to an organization while expanding my expertise and facing diverse challenges to grow professionally. I also aim to further cultivate servant leadership principles through practical experience.
-
+Kubernetes Platform Engineer specializing in enterprise-scale infrastructure automation, secure platform architecture, and developer enablement. Proven track record designing and operating OpenShift and Kubernetes environments across bare metal, virtual, and cloud platforms (GCP). Expert in building reliable, automated systems through Infrastructure as Code, CI/CD pipeline engineering, and policy-driven platform management. Strong background in platform security, compliance automation, and supply chain security from dedicated Cloud Security team experience.
 
 ## Experience Timeline
 
@@ -20,21 +19,24 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
 <br>
 
 {{< timeline >}}
-    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Nov 2025 – Present" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="code" header="K8s Platform Engineer - Team Lead" badge="Nov 2025 – Present" subheader="Ford Motor Company" >}}
     <ul>
-        <li>Designing and provisioning multi-cloud infrastructure (GCP, Azure, On-prem) for global scale</li>
-        <li>Developing automation and operators to reduce toil and improve developer experience</li>
+        <li>Lead platform engineering team managing enterprise OpenShift environments serving 1000+ internal customers</li>
+        <li>Architect and develop CLI tooling in Go for infrastructure automation (HPE iLO, OneView)</li>
+        <li>Orchestrate multi-team incident response for critical infrastructure issues</li>
+        <li>Mentor team members and lead Ford Kubernetes User Group bi-quarterly (100+ engineers)</li>
     </ul>
     <br><a href="/experience/ford-kubernetes-platform-engineer-lead/">Full details →</a>
     {{< /timelineItem >}}
 
-    {{< timelineItem icon="shield" header="Cloud Security Engineer" badge="May 2025 – Nov 2025" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="shield" header="Kubernetes Security Specialist" badge="May 2025 – Nov 2025" subheader="Ford Motor Company" >}}
     <ul>
-        <li>Implemented secure-by-default guardrails including image provenance verification and RBAC tightening</li>
-        <li>Integrated vulnerability scanning and policy enforcement into CI/CD workflows</li>
-        <li>Co-authored internal Kubernetes security guidelines translating compliance controls into actionable developer guidance</li>
+        <li>Kubernetes SME for Cloud Security org; led container security, policy enforcement, and secure SDLC architecture</li>
+        <li>Built secure image repository infrastructure with Tekton, Quay, GCR, and automated supply chain security</li>
+        <li>Authored enterprise container security policies for Ford Cloud Standard</li>
+        <li>Deployed Kyverno policy enforcement and engineered compliance infrastructure (CIS, NIST)</li>
     </ul>
-    <br><a href="/experience/ford-cloud-security-engineer/">Full details →</a>
+    <br><a href="/experience/ford-kubernetes-security-specialist/">Full details →</a>
     {{< /timelineItem >}}
 
     {{< timelineItem icon="graduation-cap" header="MBA" badge="May 2024" subheader="Oakland University" >}}
@@ -45,21 +47,21 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
     </ul>
     {{< /timelineItem >}}
 
-    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Jan 2022 – Jun 2025" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Jan 2022 – Mar 2025" subheader="Ford Motor Company" >}}
     <ul>
-        <li>Coordinated core upgrades across multi-cluster OpenShift and Kubernetes environments maintaining N-1 compliance</li>
-        <li>Co-facilitated the Kubernetes User Group and co-maintained internal documentation hub</li>
-        <li>Improved Terraform modules with validation, version pinning, and policy alignment</li>
-        <li>Participated in on-call rotation handling incident triage, root cause analysis, and communications</li>
+        <li>Managed OpenShift platform operations including upgrades, patching, and lifecycle management</li>
+        <li>Led Ford Kubernetes User Group, establishing knowledge-sharing culture and promoting platform adoption</li>
+        <li>Developed and maintained Terraform modules as reusable infrastructure patterns</li>
+        <li>Served as on-call engineer for platform availability and incident response</li>
     </ul>
     <br><a href="/experience/ford-kubernetes-platform-engineer/">Full details →</a>
     {{< /timelineItem >}}
 
     {{< timelineItem icon="code" header="DevOps Engineer" badge="Sep 2020 – Dec 2022" subheader="Ford Motor Company" >}}
     <ul>
-        <li>Supported Android (ConcourseCI) and iOS (CircleCI) CI/CD pipelines plus Spring Boot and Angular services</li>
-        <li>Led cross-functional hackathon producing a code review helper tool adopted in production</li>
-        <li>Hardened pipelines and reduced onboarding friction for application teams</li>
+        <li>Engineered CI/CD pipelines for mobile platforms using ConcourseCI (Android) and CircleCI (iOS)</li>
+        <li>Led Hackathon team to develop production tooling from concept to deployment</li>
+        <li>Built full-stack applications using SpringBoot, JavaScript, Angular, and Bootstrap</li>
     </ul>
     <br><a href="/experience/ford-devops-engineer/">Full details →</a>
     {{< /timelineItem >}}
@@ -107,9 +109,23 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
 
 ### Skills
 
-**Platform and Cloud:** Kubernetes, OpenShift, Red Hat Enterprise Linux, Terraform, GitOps, Tekton, Red Hat Dev Spaces, Bash scripting, Ansible, Google Cloud (Cloud Run, Compute Engine, Cloud Storage, GKE, IAM)
+**K8s & Containers:** OpenShift/Kubernetes, Podman, bare metal & cloud deployments
 
-**Programming:** Go, Python, JavaScript, Object Oriented Programming fundamentals
+**IaC & GitOps:** Terraform, Ansible, GitOps, policy-as-code (Kyverno)
+
+**Cloud Platforms:** Google Cloud Platform (Cloud Run, GCR, IAM, Compute Engine), Azure Entra ID
+
+**CI/CD & Automation:** Tekton, ConcourseCI, CircleCI, GitOps workflows
+
+**Programming:** Go, Python, JavaScript, Bash scripting, CLI development
+
+**Platform Security:** Pod Security Standards, RBAC, Kyverno, RHACS, compliance automation (CIS, NIST)
+
+**Supply Chain Security:** Cosign signing, SBOM generation, Trivy scanning, Quay, GCR, artifact attestation
+
+**Dev Tooling:** Red Hat Dev Spaces, GitHub Codespaces, Dev containers, Podman Compose
+
+**AI-Assisted Development:** GitHub Copilot (daily use with custom agents)
 
 ## Deployable Manifest
 
@@ -123,34 +139,40 @@ metadata:
     namespace: garrett-dev
     labels:
         location: Detroit, MI
-        role: Kubernetes Platform Engineer
+        role: Senior Kubernetes Platform Engineer
     annotations:
         linkedin: https://www.linkedin.com/in/garrettholland/
         github: https://github.com/glholland
 spec:
     replica: 1
-    headline: Kubernetes Platform Engineer
+    headline: Senior Kubernetes Platform Engineer
     location: Detroit, MI
     skills:
         - Kubernetes
         - OpenShift
+        - Go
         - Terraform
+        - Ansible
         - GitOps
         - Tekton
+        - Kyverno
         - Google Cloud
-        - Go
         - Python
         - JavaScript
+        - GitHub Copilot
     experience:
         - company: Ford Motor Company
             position: Kubernetes Platform Engineer
             period: Nov 2025 - Present
         - company: Ford Motor Company
-            position: Cloud Security Engineer
+            position: K8s Platform Engineer - Team Lead
+            period: Nov 2025 - Present
+        - company: Ford Motor Company
+            position: Kubernetes Security Specialist
             period: May 2025 - Nov 2025
         - company: Ford Motor Company
             position: Kubernetes Platform Engineer
-            period: Jan 2022 - Jun 2025
+            period: Jan 2022 - May 2025
         - company: Ford Motor Company
             position: DevOps Engineer
             period: Sep 2020 - Dec 2022
@@ -171,6 +193,6 @@ spec:
             year: 2020
 status:
     available: true
-    currentRole: Kubernetes Platform Engineer
-    lastUpdated: "2025-11-29T00:00:00Z"
+    currentRole: K8s Platform Engineer - Team Lead
+    lastUpdated: "2026-03-28T00:00:00Z"
 ```
