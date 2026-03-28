@@ -47,7 +47,7 @@ Below is a concise visual timeline of roles. Bullet points highlight collaborati
     </ul>
     {{< /timelineItem >}}
 
-    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Jan 2022 – May 2025" subheader="Ford Motor Company" >}}
+    {{< timelineItem icon="code" header="Kubernetes Platform Engineer" badge="Jan 2022 – Mar 2025" subheader="Ford Motor Company" >}}
     <ul>
         <li>Managed OpenShift platform operations including upgrades, patching, and lifecycle management</li>
         <li>Led Ford Kubernetes User Group, establishing knowledge-sharing culture and promoting platform adoption</li>
