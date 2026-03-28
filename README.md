@@ -4,7 +4,7 @@ Personal website and resume site built with Hugo and the Blowfish theme.
 
 ## Stack
 
-- Hugo 0.148.2
+- Hugo 0.152.2
 - Blowfish theme via git submodule
 - GitHub Actions for PR preview artifacts and GitHub Pages deployment
 
