@@ -1,0 +1,52 @@
+body .article-content:has(.pdf-inline-viewer) {
+  width: min(40vw, 1400px);
+  max-width: calc(100vw - 3rem) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pdf-inline-viewer {
+  width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.pdf-inline-viewer__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.875rem;
+}
+
+.pdf-inline-viewer__status {
+  margin-bottom: 0.875rem;
+  color: var(--color-neutral-500, #6b7280);
+  font-size: 0.95rem;
+}
+
+.pdf-inline-viewer__pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdf-inline-viewer__page {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: white;
+  border: 1px solid var(--color-neutral-300, #d1d5db);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+}
+
+@media (max-width: 768px) {
+  body .article-content:has(.pdf-inline-viewer) {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .pdf-inline-viewer {
+    width: 100%;
+  }
+}
