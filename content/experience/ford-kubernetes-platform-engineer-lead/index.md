@@ -1,23 +1,27 @@
 ---
-title: "Kubernetes Platform Engineer"
+title: "Kubernetes Platform Engineer - Team Lead"
 company: "Ford Motor Company"
-role: "Kubernetes Platform Engineer"
-location: "Dearborn, MI (Hybrid)"
+role: "Kubernetes Platform Engineer - Team Lead"
+location: "Dearborn, MI (Remote)"
 showDate: false
 showAuthor: false
 ---
 
 **Dates:** Nov 2025 – Present
 
-Designing and provisioning infrastructure to support cloud-native applications across a geographically distributed team. Focusing on container strategies and the Kubernetes ecosystem to support increasing data and compute requirements in both multi-cloud (GCP, Azure) and on-premise environments.
+Leading platform engineering team managing enterprise OpenShift environments serving internal customers. Combining hands-on infrastructure automation with team leadership, incident coordination, and community enablement.
 
 ### Highlights
 
-- **Platform Engineering:** Designing and provisioning multi-cloud infrastructure (GCP, Azure, On-prem) to support global compute requirements.
-- **Automation & SRE:** Developing operators and pipelines to reduce toil, improve developer experience, and lower the barrier to entry for platform adoption.
-- **Lifecycle Management:** Driving upgrades and maintenance for global OpenShift fleets, ensuring stability and security for critical workloads.
-- **Innovation:** Researching and proving out new technologies to extend platform capabilities and improve ease of use.
+- Lead platform engineering team managing enterprise OpenShift environments, ensuring N-1 platform availability through strategic upgrades and lifecycle management.
+- Architect and develop CLI tooling in Go for infrastructure automation, managing HPE iLO and OneView operations including server profile templates, configuration validation, and hardware deployment workflows.
+- Orchestrated multi-team incident response for critical infrastructure issues, leading engineers across teams through complex technical investigations with NetApp, Red Hat, and Microsoft support to final RCA.
+- Mentor team members on Kubernetes architecture, platform operations, and automation best practices; foster culture of continuous improvement through direct, constructive feedback in regular 1:1s.
+- Lead Ford Kubernetes User Group bi-quarterly, delivering platform updates, demonstrating best practices, and facilitating vendor workshops to elevate organizational platform expertise.
+- Leverage GitHub Copilot daily with repository-specific custom agents and instruction files to accelerate development, refactoring, and prototyping of platform automation.
+- Partner with application teams on workload design, resource allocation, and platform architecture decisions to ensure scalable, reliable deployments.
+- Maintain 24/7 on-call responsibility as primary and escalation engineer for platform availability and incident resolution.
 
 ### Stack
 
-Kubernetes, OpenShift, Google Cloud (GCP), Azure, Go, Bash, Terraform, GitOps, Tekton, ArgoCD
+OpenShift, Kubernetes, Go, Terraform, Ansible, GitOps, Tekton, HPE iLO, HPE OneView, RHEL, Bash, Google Cloud, GitHub Copilot

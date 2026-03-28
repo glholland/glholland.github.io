@@ -1,0 +1,4 @@
+{{ if and .Page (.Page.HasShortcode "pdf") }}
+  <link rel="stylesheet" href="/css/pdf-inline-viewer.css">
+  <script defer src="/js/pdf-inline-viewer.js"></script>
+{{ end }}

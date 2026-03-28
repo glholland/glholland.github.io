@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "PDF Document" -}}
+{{- $buttonText := .Get "buttonText" | default "Download PDF" -}}
+
+<div class="pdf-inline-viewer" data-pdf-src="{{ $src }}" data-pdf-title="{{ $title }}">
+  <div class="pdf-inline-viewer__actions">
+    <a
+      href="{{ $src }}"
+      target="_blank"
+      rel="noopener"
+      class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">
+      {{ $buttonText }}
+    </a>
+  </div>
+  <div class="pdf-inline-viewer__status">Loading resume preview...</div>
+  <div class="pdf-inline-viewer__pages" aria-live="polite"></div>
+  <noscript>
+    <p>JavaScript is required for the inline PDF preview. <a href="{{ $src }}">Download the PDF</a> instead.</p>
+  </noscript>
+</div>
