@@ -1,6 +1,6 @@
 (function () {
-  const pdfJsUrl = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
-  const pdfJsWorkerUrl = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const pdfJsUrl = "/js/pdf.min.js";
+  const pdfJsWorkerUrl = "/js/pdf.worker.min.js";
   let pdfJsPromise;
 
   function debounce(callback, delay) {
