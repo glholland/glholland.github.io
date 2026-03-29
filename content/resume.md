@@ -4,6 +4,7 @@ aliases: ["/cv"]
 showDate: false
 showAuthor: false
 showReadingTime: false
+showWordCount: false
 showEdit: false
 showLikes: false
 showViews: false
