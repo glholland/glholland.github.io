@@ -61,7 +61,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = false
+  showViews = true
   showLikes = false
   showDateOnlyInArticle = false
   showDateUpdated = false
@@ -88,7 +88,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCategoryOnly = false # use showTaxonomies OR showCategoryOnly, not both
   showAuthorsBadges = false
   showWordCount = true
-  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
+  sharingLinks = [ "linkedin", "twitter", "bluesky", "reddit"]
   showZenMode = false
 
 [list]
@@ -98,7 +98,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
   showSummary = false
-  showViews = false
+  showViews = true
   showLikes = false
   showTableOfContents = false
   showCards = false
@@ -116,7 +116,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showHero = false
   # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
-  showViews = false
+  showViews = true
   showLikes = false
   showTableOfContents = false
   cardView = false
@@ -125,21 +125,24 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showHero = false
   # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
-  showViews = false
+  showViews = true
   showLikes = false
   showTableOfContents = true
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
 
+# Firebase web API keys are designed to be public — security is enforced by
+# Firestore security rules and authorized domain restrictions, not by keeping
+# these values secret. See: https://firebase.google.com/docs/projects/api-keys
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyAv6FKSphsrdL2osHqYBoQ5GeqE0ghlx9s"
+  authDomain = "garrettholland-7efc7.firebaseapp.com"
+  projectId = "garrettholland-7efc7"
+  storageBucket = "garrettholland-7efc7.firebasestorage.app"
+  messagingSenderId = "951643212271"
+  appId = "1:951643212271:web:c60a0af868f1fad39c4e1a"
+  measurementId = "G-NM49DVFFYW"
 
 [fathomAnalytics]
   # site = "ABC12345"
