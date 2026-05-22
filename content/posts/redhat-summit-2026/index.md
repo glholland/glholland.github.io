@@ -34,7 +34,7 @@ If I ordered this by frequency of utterance, AI would be at the top. LLM inferen
 
 To break down the naming confusion, here's my ground level view.
 
-- [OpenShift AI](https://www.redhat.com/en/products/ai/openshift-ai) is rebranded OpenShift Data Science which was orginally targeting ML, data lakes, data processing, etc. OpenShift Data Science just didn't have as much pizazz as a product with "AI" in the name.
+- [OpenShift AI](https://www.redhat.com/en/products/ai/openshift-ai) is rebranded OpenShift Data Science which was originally targeting ML, data lakes, data processing, etc. OpenShift Data Science just didn't have as much pizazz as a product with "AI" in the name.
 - OpenShift Lightspeed is a feature for OpenShift which can assist with troubleshooting with contextual awareness of the operating environment. BYO LLM.
 - RHEL AI is a set of tools and features integrated into RHEL to enhance AI workloads, including optimizations for running AI models on RHEL.
 
