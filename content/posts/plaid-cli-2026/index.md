@@ -5,6 +5,8 @@ draft = false
 tags = ["go", "cli", "plaid", "finance", "automation", "security"]
 categories = ["Projects", "Tools"]
 showTableOfContents = true
+showHero = true
+heroStyle = "basic"
 sharingLinks = ["linkedin", "reddit", "bluesky", "twitter"]
 +++
 
