@@ -14,7 +14,7 @@ sharingLinks = ["linkedin", "reddit", "bluesky", "twitter"]
 Leveraging the internet for profit and fun!
 {{< /lead >}}
 
-This CLI was envisioned with a few core tenants in mind: get transaction data, store it securely, and make it easily exportable.
+This CLI was envisioned with a few core tenets in mind: get transaction data, store it securely, and make it easily exportable.
 
 {{< github repo="glholland/plaid-cli" showThumbnail=true >}}
 
@@ -26,17 +26,21 @@ I wanted to see my transaction history all in one place; not disparate PDFs from
 
 I've known about the Plaid API for a while and have kept an eye on it. A few years ago it was still a cost to use, even as a hobbyist, but sometime this year Plaid announced [trial accounts](https://support.plaid.com/hc/en-us/articles/39994173227159-What-is-the-Plaid-Trial-plan) which allow for production access to the API for free, albeit with some limitations.
 
-This was the catalyst that set me off on wrapping the API in some code to enable myself programmatic access to my own data. This interest was initiated by each financial institution providing transaction histories in a pitiful manner and my simple desire to have more insights into my little own business of one.
+This was the catalyst that set me off on wrapping the API in some code to give myself programmatic access to my own data. This interest was initiated by each financial institution providing transaction histories in a pitiful manner and my desire to have more insights into my own little business of one.
 
 ## Getting Started
 
-There's some pretty [bare bones CI/CD](https://github.com/glholland/plaid-cli/tree/main/.github/workflows) setup to build and release the binary on GitHub, so you can grab the latest release from there. I'd be interested in a brew tap for it but seeing as I'm the only user, not much demand tbh.
+The binaries are built and distributed via [GitHub releases](https://github.com/glholland/plaid-cli/releases), [Homebrew](https://github.com/glholland/homebrew-tap), and [Chocolatey](https://community.chocolatey.org/packages/plaid-cli) via [GoReleaser](https://goreleaser.com/).
 
-If you are interested in building from source, you can clone the repo and run `task build` to get the binary. You can also set your `GOOS` and `GOARCH` environment variables to build for different platforms. The code is pretty straightforward and should be easy to navigate if you're interested in contributing or just want to see how it works under the hood.
+If you are interested in building from source, you can clone the repo and run `task build` to get the binary. You can also set your `GOOS` and `GOARCH` environment variables to build for different platforms. The code is fairly straightforward and should be easy to navigate if you're interested in contributing or just want to see how it works under the hood.
+
+Otherwise, you can checkout [glholland/homebrew-tap](https://github.com/glholland/homebrew-tap) and run `brew install glholland/tap/plaid-cli` to install it via Homebrew or use `choco install plaid-cli` for the Windows users out there.
+
+{{< github repo="glholland/homebrew-tap" showThumbnail=true >}}
 
 ### Prerequisites
 
-Well, this is probably my favorite part about writing anything in Go. Once the development is done and it's compiled, the binary has no dependencies. If you want to build it from source, have the Go 1.26 installed and you're good to go. The `go.mod` file is pretty slim but a notable shout out to Plaid for providing a [Go client library](https://github.com/plaid/plaid-go) which made development much easier. (Read: Cost fewer tokens.)
+Well, this is probably my favorite part about writing anything in Go. Once the development is done and it's compiled, the binary has no dependencies. If you want to build it from source, have Go 1.26 installed and you're good to go. The `go.mod` file is fairly slim but a notable shout out to Plaid for providing a [Go client library](https://github.com/plaid/plaid-go) which made development much easier. (Read: Cost fewer tokens. :laughing:)
 
 ### Configuration
 
@@ -76,14 +80,16 @@ So now you have created the Plaid trial account, found your API secrets, install
 
 I've generally been dumping it out to CSV and viewing that in either Excel or a Google Sheet.
 
-### Rules
+### Rules and Correlation engine
 
 Initially, I didn't want to muddy the waters with a rules feature but once I started seeing my transaction history, I realized I needed to be able to have some ability to categorize and tag transactions that may not report themselves accurately. For example, my mortgage looks like an debit out of my account with no indication that it's a mortgage payment. I have a rule that can look categorize it as a "bill" if it's within a certain amount from a specific account.
 
-With this I'm able to ensure a running rule that overlays on top of the raw transaction history without modifying the data from Plaid. Applying rules won't ruin your transactions, cool.
+I've spent some time thinking about features I wish existed in other finance aggregators and I always wish that the tools were smart enough to correlate the debits from a depository (checking) account with the credits to a credit card or installment/loan account, matching amounts exactly and a few days apart is almost a 1:1 correlation. As this was a type of rule but requires a bit more logic, I implemented `plaid-cli rules correlate` which performs this and sets those transactions as "Transfer: Credit Card Payment" and tags them with `transfer` and `card-payment`.
+
+This is exactly why having this level of customization is important to me. I can make the rules that I want and not be limited by seemingly arbitrary opinions of a company.
 
 ## Future Roadmap
 
 There's lots of potential but I'm only interested in possibly having better export features and possibly some basic insights. Again, this tool is just that, a tool It gets my data, helps me categorize it, and now I can [ask Claude](https://github.com/glholland/plaid-cli/blob/main/SKILLS.md) "Where the heck did my money go?!"
 
-... or maybe "How might I optimize my spending based on the credit card benefits I have available to me?"
+... or maybe "How might I optimize my spending based on the credit card benefits I have available to me?" :moneybag:
